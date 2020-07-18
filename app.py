@@ -13,7 +13,7 @@ app.secret_key = 'admin'
 # Database connection details
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ':1aduhTrr-'
+app.config['MYSQL_PASSWORD'] = '}2H4tktY%'
 app.config['MYSQL_DB'] = 'geektextdb'
 
 # initialize MySQL
@@ -22,8 +22,8 @@ mysql = MySQL(app)
 @app.route('/')
 def hello():
     test = bookSearch(mysql)
-    book = test.bookByGenre()
-    return book.bookName
+    book = test.bookByGenre("Horror")
+    return str(len(book))
 
 
 if __name__ == '__main__':

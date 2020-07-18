@@ -1,3 +1,5 @@
+# AUTHOR: Guillermo Casal
+
 class Author:
 
     def __init__(self, authorDetails: list):
