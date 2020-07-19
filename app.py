@@ -21,9 +21,39 @@ mysql = MySQL(app)
 
 @app.route('/')
 def hello():
-    test = bookSearch(mysql)
-    book = test.bookByGenre("Horror")
-    return str(len(book))
+    
+    return render_template('index.html')
+
+
+@app.route('/feature1', methods=['GET'])
+def feature1():
+
+    #Search by genre "Horror"
+    search = bookSearch(mysql)
+    horror = search.bookByGenre("Horror")
+    fantasy = search.bookByGenre("Fantasy")
+
+    return render_template("feature1.html", horror=horror, fantasy=fantasy)
+
+@app.route('/feature2')
+def feature2():
+    return "Feature 2"
+
+@app.route('/feature3')
+def feature3():
+    return "Feature 3"
+
+@app.route('/feature4')
+def feature4():
+    return "Feature 4"
+
+@app.route('/feature5')
+def feature5():
+    return "Feature 5"
+
+@app.route('/feature6')
+def feature6():
+    return "Feature 6"
 
 
 if __name__ == '__main__':

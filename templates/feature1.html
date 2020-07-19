@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 1</title>
+</head>
+
+<body>
+    <h1>Search for books by Genre</h1>
+    <h2>Horror</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+        </tr>
+        {% for book in horror %}
+        <tr>
+            <th>{{ book.isbn }}</th>
+            <th>{{ book.bookName }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.genre }}</th>
+            <th>{{ book.publisher }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Fantasy</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+        </tr>
+        {% for book in fantasy %}
+        <tr>
+            <th>{{ book.isbn }}</th>
+            <th>{{ book.bookName }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.genre }}</th>
+            <th>{{ book.publisher }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
