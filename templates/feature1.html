@@ -49,6 +49,28 @@
         {% endfor %}
     </table>
 
+    <h1>List of Top 10 Sellers</h1>
+
+    <h2>Top Sellers</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Copies Sold</th>
+        </tr>
+        {% for book in topSellers %}
+        <tr>
+            <th>{{ book.isbn }}</th>
+            <th>{{ book.bookName }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.genre }}</th>
+            <th>{{ book.copiesSold }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
 </body>
 
 </html>

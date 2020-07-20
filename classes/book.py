@@ -11,4 +11,6 @@ class Book:
         self.price = bookDetails[4]
         self.genre = bookDetails[5]
         self.publisher = bookDetails[6]
+        self.yearPublished = bookDetails[7]
+        self.copiesSold = bookDetails[8]
 

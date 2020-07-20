@@ -24,8 +24,7 @@ class bookSearch():
 
         # execute the query
         cur.execute(query)
-
-        
+ 
         queryResult = cur.fetchone()
         # loop through results of query 
         while queryResult is not None:
@@ -33,4 +32,22 @@ class bookSearch():
             bookList.append(Book(queryResult))
             queryResult = cur.fetchone()
         return bookList
+
+    def giveTopSellers(self) -> list:
+
+        cur = self.mysql.connection.cursor()
+
+        bookList = []
+        query = "SELECT * FROM book ORDER BY copiesSold DESC LIMIT 10"
+
+        cur.execute(query)
+
+        queryResult = cur.fetchone()
+        # loop through results of query 
+        while queryResult is not None:
+            # Each result becomes a Book object and is added to list
+            bookList.append(Book(queryResult))
+            queryResult = cur.fetchone()
+        return bookList
+
 
