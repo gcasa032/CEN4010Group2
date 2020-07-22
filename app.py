@@ -13,7 +13,7 @@ app.secret_key = 'admin'
 # Database connection details
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '}2H4tktY%'
+app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'geektextdb'
 
 # initialize MySQL
