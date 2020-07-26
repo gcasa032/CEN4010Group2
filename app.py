@@ -51,7 +51,7 @@ def feature4():
 
 @app.route('/feature5')
 def feature5():
-    return "Feature 5"
+    return render_template("feature5.html")
 
 @app.route('/feature6')
 def feature6():
@@ -59,4 +59,4 @@ def feature6():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
