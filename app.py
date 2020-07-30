@@ -3,8 +3,12 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from classes.book import Book
 from classes.author import Author
+from classes.user import User
+from classes.rating import Rating
+
 from classes.booksearch import BookSearch
 from classes.booklist import BookList
+from classes.rater import Rater
 
 app = Flask(__name__)
 
@@ -54,14 +58,22 @@ def feature3():
 def feature4():
     return "Feature 4"
 
-@app.route('/feature5')
+@app.route('/feature5', methods=['GET','POST'])
 def feature5():
-    return render_template("feature5.html")
+
+    rater = Rater(mysql)
+    allOpinions = rater.displayOpinion()
+    allOrderOpinions = rater.orderReviews()
+    return render_template("feature5.html",allOpinions = allOpinions, allOrderOpinions = allOrderOpinions)
+
+@app.route('/newReview', methods=['GET'])
+def newReview():
+    rater = Rater(mysql)
+    return render_template("newReview.html")
 
 @app.route('/feature6')
 def feature6():
     return "Feature 6"
-
 
 if __name__ == '__main__':
     app.run(debug=True)

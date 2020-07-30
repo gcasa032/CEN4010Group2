@@ -1,3 +1,4 @@
+
 INSERT INTO `geektextdb`.`author`
 (`firstName`, `lastName`, `biography`, `publisher`)
 VALUES
@@ -23,4 +24,6 @@ VALUES
 ('guillermocasal', '1234', 'Guillermo Casal', '123 Test St'),
 ('booklover', '1234', 'Test User', '124 Test St');
 
-
+UPDATE rating
+SET rating=4
+WHERE user_iduser=3;
