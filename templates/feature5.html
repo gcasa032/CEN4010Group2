@@ -1,7 +1,65 @@
-<form methods="POST", action="">
-   Rating from 1-5: <input type="text" name="rating" />
-   <br>
-   Your Review <input type="text" name="review" />
-   <br>
-   <input type="submit" />
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 5</title>
+</head>
+
+<body>
+    <h1>All Reviews</h1>
+
+        <p> Create a new review!</p>
+        <button>
+        <a class="nav-item nav-link" href="/newReview">CREATE</a>
+        </button>
+    <table>
+          <h2> All Currently posted reviews </h2>
+        <tr>
+            <th>ISBN</th>
+            <th>User ID</th>
+            <th>Rating</th>
+            <th>Review</th>
+            <th>Date Published  </th>
+            <th>
+              <button>
+              <a class="nav-item nav-link">Order</a>
+              </button>
+            <th>
+        </tr>
+        {% for rate in allOpinions %}
+        <tr>
+            <th>{{ rate.book_isbn }}</th>
+            <th>{{ rate.user_iduser }}</th>
+            <th>{{ rate.rating }}</th>
+            <th>{{ rate.comment }}</th>
+            <th>{{ rate.date }}</th>
+        </tr>
+        {% endfor %}
+
+        <table>
+          <h2> All Currently posted reviews in order from highest rating</h2>
+            <tr>
+                <th>ISBN</th>
+                <th>User ID</th>
+                <th>Rating</th>
+                <th>Review</th>
+                <th>Date Published</th>
+                <th>
+                  <button>
+                  <a class="nav-item nav-link">Order</a>
+                  </button>
+                <th>
+            </tr>
+            {% for rate in allOrderOpinions %}
+            <tr>
+                <th>{{ rate.book_isbn }}</th>
+                <th>{{ rate.user_iduser }}</th>
+                <th>{{ rate.rating }}</th>
+                <th>{{ rate.comment }}</th>
+                <th>{{ rate.date }}</th>
+            </tr>
+            {% endfor %}
+
+</body>

@@ -24,3 +24,6 @@ VALUES
 ('booklover', '1234', 'Test User', '124 Test St');
 
 
+UPDATE rating
+SET rating=4
+WHERE user_iduser=3;

@@ -40,7 +40,7 @@ def feature1():
 
 
     #renders the feature1.htmls file and passes horror and fantasy lists containing books of that genre
-    return render_template("feature1.html", horror=horror, fantasy=fantasy, topSellers=topSellers, byRating=byRating, horror2=horror2)
+    return render_template("feature1.html", horror=horror, fantasy=fantasy, topSellers=topSellers, byRating=byRating, horror2=  horror2)
 
 @app.route('/feature2')
 def feature2():
