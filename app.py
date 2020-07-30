@@ -3,8 +3,17 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from classes.book import Book
 from classes.author import Author
+<<<<<<< HEAD
 from classes.booksearch import BookSearch
 from classes.booklist import BookList
+=======
+from classes.user import User
+from classes.rating import Rating
+
+from classes.booksearch import BookSearch
+from classes.booklist import BookList
+from classes.rater import Rater
+>>>>>>> 7787703f4deb7537d6997695502492cd0b47c18c
 
 app = Flask(__name__)
 
