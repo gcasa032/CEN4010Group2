@@ -13,4 +13,10 @@ class Book:
         self.publisher = bookDetails[6]
         self.yearPublished = bookDetails[7]
         self.copiesSold = bookDetails[8]
+        self.rating = -1
+        
 
+    def setRating(self, rating: int):
+        self.rating = rating
+
+        

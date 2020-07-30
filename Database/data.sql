@@ -16,3 +16,11 @@ VALUES
 ('1501142976', '1', 'It: A Novel', 'Stephen King’s terrifyin novel about seven adults who return to their hometown to confront a nightmare they had first stumbled on as teenagers…an evil without a name: It.', '8.93', 'Horror', 'Scribner', '1986'),
 ('0307743659', '1', 'The Shining', 'Before Doctor Sleep, there was The Shining, a classic of modern American horror from the undisputed master, Stephen King.', '6.70', 'Horror', 'Anchor', '1977'),
 ('1501180983', '1', 'The Outsider: A Novel', 'Evil has many faces…maybe even yours in this #1 New York Times bestseller from master storyteller Stephen King.', '11.68', 'Horror', 'Scribner', '2018');
+
+INSERT INTO `geektextdb`.`user`
+(`username`, `password`, `name`, `address`)
+VALUES
+('guillermocasal', '1234', 'Guillermo Casal', '123 Test St'),
+('booklover', '1234', 'Test User', '124 Test St');
+
+

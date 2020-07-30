@@ -1,6 +1,5 @@
 #AUTHOR Stephan Belizaire
 
-
 class Rating:
 
     def __init__(self, newRating: list):
