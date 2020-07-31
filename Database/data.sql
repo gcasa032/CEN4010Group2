@@ -16,3 +16,13 @@ VALUES
 ('1501142976', '1', 'It: A Novel', 'Stephen King’s terrifyin novel about seven adults who return to their hometown to confront a nightmare they had first stumbled on as teenagers…an evil without a name: It.', '8.93', 'Horror', 'Scribner', '1986'),
 ('0307743659', '1', 'The Shining', 'Before Doctor Sleep, there was The Shining, a classic of modern American horror from the undisputed master, Stephen King.', '6.70', 'Horror', 'Anchor', '1977'),
 ('1501180983', '1', 'The Outsider: A Novel', 'Evil has many faces…maybe even yours in this #1 New York Times bestseller from master storyteller Stephen King.', '11.68', 'Horror', 'Scribner', '2018');
+
+INSERT INTO `geektextdb`.`shoppingcart`
+(`user`, `isbn`, `title`, `price`, `quantity`)
+VALUES
+('JohnDoe23' , '1594130000', 'Harry Potter And The Sorcerers Stone',  '13.95', '2'),
+('AbetheBabe' , '0736648046', 'Harry Potter and the Chamber of Secrets', '13.95' , '1'),
+('gamer123' , '1443434973', '1984','13.94', '1'),
+('student3336','1501142976', 'It: A Novel','8.93', '1'),
+('bigguy2525' , '0307743659', 'The Shining', '6.70', '3'),
+('bobtheman' , '1501180983', 'The Outsider: A Novel', '11.68', '1');
