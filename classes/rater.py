@@ -51,15 +51,12 @@ class Rater:
         return allRated
 
             #calculate the average of all the total ratings
-    def calcAvgR(self):
+    def calcAvgR(self, isbn: str):
         cur = self.mysql.connection.cursor()
 
         allRated = []
-        query = "SELECT * FROM geektextdb.rating ORDER BY rating"
+        query = "SELECT avg(rating) FROM geektextdb.rating WHERE book_isbn = '" + isbn + "'"
+        # Should be avg rating of a particualr book not all books
         cur.execute(query)
-        allRatings = cur.fetchall()
-        allRated.append(Rating(allRatings))
-        for x in allRating:
-            total += x
-            return total
-        return total
+        avgRating = cur.fetchall()
+        return int(avgRating)

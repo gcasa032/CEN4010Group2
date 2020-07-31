@@ -3,17 +3,12 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from classes.book import Book
 from classes.author import Author
-<<<<<<< HEAD
-from classes.booksearch import BookSearch
-from classes.booklist import BookList
-=======
 from classes.user import User
 from classes.rating import Rating
 
 from classes.booksearch import BookSearch
 from classes.booklist import BookList
 from classes.rater import Rater
->>>>>>> 7787703f4deb7537d6997695502492cd0b47c18c
 
 app = Flask(__name__)
 
@@ -49,7 +44,7 @@ def feature1():
 
 
     #renders the feature1.htmls file and passes horror and fantasy lists containing books of that genre
-    return render_template("feature1.html", horror=horror, fantasy=fantasy, topSellers=topSellers, byRating=byRating, horror2=  horror2)
+    return render_template("feature1.html", horror=horror, fantasy=fantasy, topSellers=topSellers, byRating=byRating, horror2= horror2)
 
 @app.route('/feature2')
 def feature2():
