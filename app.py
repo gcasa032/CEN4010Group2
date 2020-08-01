@@ -60,7 +60,10 @@ def feature4():
 
 @app.route('/feature5')
 def feature5():
-    return render_template("feature5.html")
+    rater = Rater(mysql)
+    allOpinions = rater.displayOpinion()
+    allOrderOpinions = rater.orderReviews()
+    return render_template("feature5.html",allOpinions = allOpinions, allOrderOpinions = allOrderOpinions)
 
 @app.route('/feature6')
 def feature6():
