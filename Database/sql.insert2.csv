@@ -1,0 +1,4 @@
+iduser,username,password,name,address,admin
+1,guillermocasal,1234,"Guillermo Casal","123 Test St",0
+2,booklover,1234,"Test User","124 Test St",0
+3,Steve,2134,UserSteve,"125 Test ST",0

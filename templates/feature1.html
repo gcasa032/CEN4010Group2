@@ -71,6 +71,48 @@
         {% endfor %}
     </table>
 
+    <h1>Search for books by Rating</h1>
+
+    <h2>Books with a 3 rating and up</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+        </tr>
+        {% for book in byRating %}
+        <tr>
+            <th>{{ book.isbn }}</th>
+            <th>{{ book.bookName }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.genre }}</th>
+            <th>{{ book.rating }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h1>Search for xbooks</h1>
+    <h2>2 books</h2>
+    <table>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Publisher</th>
+        </tr>
+        {% for book in horror2 %}
+        <tr>
+            <th>{{ book.isbn }}</th>
+            <th>{{ book.bookName }}</th>
+            <th>{{ book.price }}</th>
+            <th>{{ book.genre }}</th>
+            <th>{{ book.publisher }}</th>
+        </tr>
+        {% endfor %}
+
 </body>
 
 </html>

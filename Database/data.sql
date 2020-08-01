@@ -26,3 +26,14 @@ VALUES
 ('student3336','1501142976', 'It: A Novel','8.93', '1'),
 ('bigguy2525' , '0307743659', 'The Shining', '6.70', '3'),
 ('bobtheman' , '1501180983', 'The Outsider: A Novel', '11.68', '1');
+
+INSERT INTO `geektextdb`.`user`
+(`username`, `password`, `name`, `address`)
+VALUES
+('guillermocasal', '1234', 'Guillermo Casal', '123 Test St'),
+('booklover', '1234', 'Test User', '124 Test St');
+
+UPDATE rating
+SET rating=4
+WHERE user_iduser=3;
+
