@@ -1,0 +1,33 @@
+<head>
+    <title>book detail</title>
+</head>
+
+<h1 style="text-align: center">{{ book.bookName }}</h1>
+<div style="position:absolute; left:50%; margin-left:-25%">
+    <table>
+        <li>
+            <label for="">isbn: {{book.isbn}}</label>
+        </li>
+        <li>
+            <label for="">description: {{ book.description }}</label>
+        </li>
+        <li>
+            <label for="">price: {{ book.price }}</label>
+        </li>
+        <li>
+            <label for="">author: {{ author.firstName + " " + author.lastName }}</label>
+        </li>
+        <li>
+            <label for="">genre: {{ book.genre}}</label>
+        </li>
+        <li>
+            <label for="">publisher: {{ book.publisher }}</label>
+        </li>
+        <li>
+            <label for="">year publisher: {{ book.yearPublished }}</label>
+        </li>
+        <li>
+            <label for="">copies Sold: {{ book.copiesSold}}</label>
+        </li>
+    </table>
+</div>
