@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, Response
+from flask import Flask, render_template, url_for, Response, request
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from classes.book import Book
@@ -9,6 +9,7 @@ from classes.rating import Rating
 from classes.booksearch import BookSearch
 from classes.booklist import BookList
 from classes.rater import Rater
+import datetime
 
 app = Flask(__name__)
 
@@ -62,7 +63,7 @@ def notfound(e):
 
 
 @app.route('/feature4')
-def index():
+def feature4():
     return render_template('feature4.html')
 
 
@@ -204,8 +205,10 @@ def feature5():
 
     allOpinions = rater.displayOpinion()
     allOrderOpinions = rater.orderReviews()
+    averageRating = rater.calcAvgR('1443434973')
+    
 
-    return render_template("feature5.html",allOpinions = allOpinions, allOrderOpinions = allOrderOpinions)
+    return render_template("feature5.html",allOpinions = allOpinions, allOrderOpinions = allOrderOpinions, averageRating=averageRating)
 
 @app.route('/newReview', methods=['POST', 'GET'])
 def newReview():
