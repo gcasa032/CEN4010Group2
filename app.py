@@ -41,6 +41,7 @@ def feature1():
     byRating = search.bookByRating(3)
     topSellers = search.giveTopSellers()
 
+    #Create BookList object
     alist = BookList(search.giveTopSellers())
     getX = alist.returnxbooks(3)
     getY = alist.returnxbooks(2)
