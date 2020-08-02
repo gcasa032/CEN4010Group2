@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book List</title>
+</head>
+
+
+<body>
+
+{#<h1>Add book</h1>#}
+
+
+{#<form method="post">#}
+{#    <label>author </label><input type="text" name="author_name" placeholder="enter author name"><br/>#}
+{#    <label>bookname： </label><input type="text" name="book_name" placeholder="enter book name"><br/>#}
+{#    <input type="submit" value="submit">#}
+{##}
+{#</form>#}
+
+<hr>
+
+<h1 style="text-align: center">Book List</h1>
+<div style="position:absolute; left:50%; margin-left:-100px">
+    <ul>
+        {% for author in authors %}
+            <li style="margin-top: 10px">{{ author.firstName+ " " + author.lastName }}
+                <a href='/author_detail/{{ author.idAuthor }}'>show</a>
+                <a href="/delete_author/{{ author.idAuthor }}"> delete</a></li>
+            <ul>
+                {% for book in books[author.idAuthor] %}
+                    <li>{{ book.bookName }}
+                        <a href='/book_detail/{{ book.isbn}}'>show</a>
+                        <a href="/delete_book/{{ book.isbn }}"> delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

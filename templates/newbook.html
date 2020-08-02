@@ -1,0 +1,45 @@
+<style>
+    label {
+        display: inline-block;
+        width: 120px;
+    }
+
+    input {
+    }
+</style>
+<h1 style="text-align: center">Add a Book</h1>
+<div style="width: 100%; text-align: center">
+    <form action="" method="post">
+        <li>
+            <label for="isbn">ISBN: </label>
+            <input type="text" maxlength="100" name="isbn" placeholder="isbn of the book"></li>
+        <li>
+            <label for="name">book name: </label>
+            <input type="text" maxlength="100" name="name" placeholder="Name of the book"></li>
+        <li>
+            <label for="description">Description: </label>
+            <input type="text" maxlength="100" name="description" placeholder="Description of the book"></li>
+        <li>
+            <label for="price">Price: </label>
+            <input type="text" maxlength="100" name="price" placeholder="Price of the book"></li>
+        <li>
+            <label for="author">Author:</label>
+            <input maxlength="100" name="author" placeholder="Author of the book"></li>
+        <li>
+            <label for="genre">Genre: </label>
+            <input maxlength="100" name="genre" placeholder="Genre of the book"></li>
+        <li>
+            <label for="publisher">Publisher: </label>
+            <input maxlength="100" name="publisher" placeholder="publisher of the book"></li>
+        <li>
+            <label for="year">Year publisher: </label>
+            <input maxlength="100" name="yearPublished" placeholder="year of the book"></li>
+        <li>
+            <label for="copiesSold">Copies sold: </label>
+            <input maxlength="100" name="copiesSold" placeholder="copiesSold of the book"></li>
+        <button type="submit">Create</button>
+    </form>
+</div>
+{% for message in get_flashed_messages() %}
+    <h1>{{ message }}</h1>
+{% endfor %}

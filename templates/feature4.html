@@ -1,0 +1,28 @@
+<head>
+    <title>BookStore</title>
+</head>
+<style>
+    div{text-align:center; margin-top:10px}
+</style>
+{% block top %}
+    <h1 style="text-align: center">BookStore</h1>
+    <div>
+        <a href="{{ url_for('book_list') }}"> book list</a>
+    </div>
+
+    <div>
+        <a href="{{ url_for('add_book') }}"> add book</a>
+    </div>
+
+    <div>
+        <a href="{{ url_for('add_author')}}"> add author</a>
+    </div>
+    <div>
+        <a href="{{ url_for('search') }}"> search book</a>
+    </div>
+    {#    <a href="{{ url_for('#') }}"> search </a>#}
+{% endblock top %}
+<hr>
+{% block content %}
+
+{% endblock content %}

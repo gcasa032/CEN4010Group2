@@ -60,7 +60,7 @@ class BookSearch:
         
         bookList = []
         #Get avg rating for each book
-        queryStr = "SELECT book.*, rating.rating FROM book INNER JOIN rating on book.isbn = rating.book_isbn WHERE rating >= " + str(rating)
+        queryStr = "SELECT book.*, AVG(rating.rating) FROM book INNER JOIN rating on book.isbn = rating.book_isbn GROUP BY book.isbn HAVING AVG(rating.rating) >= " + str(rating) + " ORDER BY AVG(rating.rating) DESC "
         cur = self.mysql.connection.cursor()
         cur.execute(queryStr)
 

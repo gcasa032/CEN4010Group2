@@ -9,109 +9,130 @@
 
 <body>
     <h1>Search for books by Genre</h1>
-    <h2>Horror</h2>
-    <table>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Genre</th>
-            <th>Publisher</th>
-        </tr>
-        {% for book in horror %}
-        <tr>
-            <th>{{ book.isbn }}</th>
-            <th>{{ book.bookName }}</th>
-            <th>{{ book.price }}</th>
-            <th>{{ book.genre }}</th>
-            <th>{{ book.publisher }}</th>
-        </tr>
-        {% endfor %}
-    </table>
+    <h3>Horror</h2>
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Publisher</th>
+            </tr>
+            {% for book in horror %}
+            <tr>
+                <th>{{ book.isbn }}</th>
+                <th>{{ book.bookName }}</th>
+                <th>{{ book.price }}</th>
+                <th>{{ book.genre }}</th>
+                <th>{{ book.publisher }}</th>
+            </tr>
+            {% endfor %}
+        </table>
 
-    <h2>Fantasy</h2>
-    <table>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Genre</th>
-            <th>Publisher</th>
-        </tr>
-        {% for book in fantasy %}
-        <tr>
-            <th>{{ book.isbn }}</th>
-            <th>{{ book.bookName }}</th>
-            <th>{{ book.price }}</th>
-            <th>{{ book.genre }}</th>
-            <th>{{ book.publisher }}</th>
-        </tr>
-        {% endfor %}
-    </table>
+        <h3>Fantasy</h3>
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Publisher</th>
+            </tr>
+            {% for book in fantasy %}
+            <tr>
+                <th>{{ book.isbn }}</th>
+                <th>{{ book.bookName }}</th>
+                <th>{{ book.price }}</th>
+                <th>{{ book.genre }}</th>
+                <th>{{ book.publisher }}</th>
+            </tr>
+            {% endfor %}
+        </table>
 
-    <h1>List of Top 10 Sellers</h1>
+        <h1>List of Top 10 Sellers</h1>
 
-    <h2>Top Sellers</h2>
-    <table>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Genre</th>
-            <th>Copies Sold</th>
-        </tr>
-        {% for book in topSellers %}
-        <tr>
-            <th>{{ book.isbn }}</th>
-            <th>{{ book.bookName }}</th>
-            <th>{{ book.price }}</th>
-            <th>{{ book.genre }}</th>
-            <th>{{ book.copiesSold }}</th>
-        </tr>
-        {% endfor %}
-    </table>
+        <h3>Top Sellers</h3>
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Copies Sold</th>
+            </tr>
+            {% for book in topSellers %}
+            <tr>
+                <th>{{ book.isbn }}</th>
+                <th>{{ book.bookName }}</th>
+                <th>{{ book.price }}</th>
+                <th>{{ book.genre }}</th>
+                <th>{{ book.copiesSold }}</th>
+            </tr>
+            {% endfor %}
+        </table>
 
-    <h1>Search for books by Rating</h1>
+        <h1>Search for books by Rating</h1>
 
-    <h2>Books with a 3 rating and up</h2>
-    <table>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Genre</th>
-            <th>Rating</th>
-        </tr>
-        {% for book in byRating %}
-        <tr>
-            <th>{{ book.isbn }}</th>
-            <th>{{ book.bookName }}</th>
-            <th>{{ book.price }}</th>
-            <th>{{ book.genre }}</th>
-            <th>{{ book.rating }}</th>
-        </tr>
-        {% endfor %}
-    </table>
+        <h3>Books with a 3 rating and up</h3>
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Rating</th>
+            </tr>
+            {% for book in byRating %}
+            <tr>
+                <th>{{ book.isbn }}</th>
+                <th>{{ book.bookName }}</th>
+                <th>{{ book.price }}</th>
+                <th>{{ book.genre }}</th>
+                <th>{{ book.rating }}</th>
+            </tr>
+            {% endfor %}
+        </table>
 
-    <h1>Search for xbooks</h1>
-    <h2>2 books</h2>
-    <table>
-        <tr>
-            <th>ISBN</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Genre</th>
-            <th>Publisher</th>
-        </tr>
-        {% for book in horror2 %}
-        <tr>
-            <th>{{ book.isbn }}</th>
-            <th>{{ book.bookName }}</th>
-            <th>{{ book.price }}</th>
-            <th>{{ book.genre }}</th>
-            <th>{{ book.publisher }}</th>
-        </tr>
-        {% endfor %}
+        <h1>Search for xbooks</h1>
+        <h3>3 books at a time</h3>
+        <table>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Genre</th>
+                <th>Publisher</th>
+            </tr>
+            {% for book in getX %}
+            <tr>
+                <th>{{ book.isbn }}</th>
+                <th>{{ book.bookName }}</th>
+                <th>{{ book.price }}</th>
+                <th>{{ book.genre }}</th>
+                <th>{{ book.publisher }}</th>
+            </tr>
+            {% endfor %}
+        </table>
+        <h3>2 books at a time</h2>
+            <table>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Genre</th>
+                    <th>Publisher</th>
+                </tr>
+                {% for book in getY %}
+                <tr>
+                    <th>{{ book.isbn }}</th>
+                    <th>{{ book.bookName }}</th>
+                    <th>{{ book.price }}</th>
+                    <th>{{ book.genre }}</th>
+                    <th>{{ book.publisher }}</th>
+                </tr>
+                {% endfor %}
+            </table>
+
 
 </body>
 

@@ -9,7 +9,7 @@ class Rater:
 
         self.mysql = mysql
 
-        #Display all review/ratings
+    #Display all review/ratings
     def displayOpinion(self):
 
         #The cursor comunicates with the database to run querys
@@ -25,18 +25,16 @@ class Rater:
             allReviews = cur.fetchone()
         return reviewList
 
-            #Create a new review
-    def createOpinion(text1,text2,text3,text4):
+    #Create a new review
+    def createRating(self, newRating: Rating):
 
         cur = self.mysql.connection.cursor()
-        date = datetime.date.today()
-        nRating = Rating(text1,text2,text3,text4,date)
 
-        query = "INSERT INTO"
-        self.session.add(nRating)
-        self.session.commit()
+        cur.execute("INSERT INTO `geektextdb`.`rating` (`book_isbn`,`user_iduser`,`rating`,`comment`,`date`) VALUES (%s,%s,%s,%s,%s)",(newRating.book_isbn, newRating.user_iduser, newRating.rating, newRating.comment, str(newRating.date)))
 
-            #Order the review from descending order
+        self.mysql.connection.commit()
+
+    #Order the review from descending order
     def orderReviews(self):
 
         cur = self.mysql.connection.cursor()
@@ -50,7 +48,7 @@ class Rater:
             allRatings = cur.fetchone()
         return allRated
 
-            #calculate the average of all the total ratings
+    #calculate the average of all the total ratings
     def calcAvgR(self, isbn: str):
         cur = self.mysql.connection.cursor()
 
@@ -58,5 +56,5 @@ class Rater:
         query = "SELECT avg(rating) FROM geektextdb.rating WHERE book_isbn = '" + isbn + "'"
         # Should be avg rating of a particualr book not all books
         cur.execute(query)
-        avgRating = cur.fetchall()
-        return int(avgRating)
+        avgRating = cur.fetchone()
+        return str(avgRating[0])
