@@ -10,24 +10,18 @@
 <body>
     <h1>All Reviews</h1>
 
-        <p> Create a new review!</p>
-        <button>
-        <a class="nav-item nav-link" href="/newReview">CREATE</a>
+    <p> Create a new review!</p>
+    <button>
+        <a href="{{ url_for('newReview') }}">CREATE</a>
         </button>
     <table>
-          <h2> All Currently posted reviews </h2>
+        <h2> All Currently posted reviews </h2>
         <tr>
             <th>ISBN</th>
             <th>User ID</th>
             <th>Rating</th>
             <th>Review</th>
             <th>Date Published</th>
-            <th>Average rating of book</th>
-            <th>
-              <button>
-              <a class="nav-item nav-link">Order</a>
-              </button>
-            <th>
         </tr>
         {% for rate in allOpinions %}
         <tr>
@@ -40,19 +34,13 @@
         {% endfor %}
 
         <table>
-          <h2> All Currently posted reviews in order from highest rating</h2>
+            <h2> All Currently posted reviews in order from highest rating</h2>
             <tr>
                 <th>ISBN</th>
                 <th>User ID</th>
                 <th>Rating</th>
                 <th>Review</th>
                 <th>Date Published</th>
-                <th>Average rating of book</th>                
-                <th>
-                  <button>
-                  <a class="nav-item nav-link">Order</a>
-                  </button>
-                <th>
             </tr>
             {% for rate in allOrderOpinions %}
             <tr>
